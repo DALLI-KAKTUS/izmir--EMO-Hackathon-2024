@@ -1,0 +1,133 @@
+body {
+    background-color: #F5F7FA; /* Light gray background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    color: #333; /* Dark text for better readability */
+    margin: 0; /* Reset margin */
+}
+
+.wrapper {
+    display: flex;             
+    justify-content: center;   
+    padding: 20px;          
+}
+
+.analyzer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background for content */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 1200px; /* Responsive max width */
+}
+
+.title {
+    font-size: 32px; /* Increased size */
+    font-weight: 700; /* Bolder title */
+    color: #4A90E2; /* Primary color */
+    margin-bottom: 20px; /* Less space for a tighter look */
+}
+
+.date-container {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #E1F5FE; /* Light blue background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.stats-pie-container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #00796b;
+    font-weight: 500;
+    margin-bottom: 16px; /* Space between boxes */
+}
+
+.stat-box p:first-child {
+    font-size: 16px; 
+    margin-bottom: 4px; 
+    color: #666; /* Dark gray for title */
+}
+
+.stat-box p:last-child {
+    margin-top: 4px;    
+    font-size: 32px;    
+    font-weight: bold;   
+    color: #4A90E2; /* Primary color for numbers */
+}
+
+.horizontal-divider {
+    width: 80%;
+    height: 1px;
+    background-color: #e0e0e0; /* Light gray for the divider */
+    margin: 16px 0;
+}
+
+.pie-chart-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px; 
+    padding: 20px; /* More padding */
+    background-color: #ffffff;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pie-chart-container {
+    width: 100%; 
+    height: 100%; 
+}
+
+.week-chart {
+    width: 800px;
+}
+
+
+
+.stat-box {
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+.stat-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+    .stats-pie-container {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+    
+    .pie-chart-card, .stats-container {
+        width: 100%; /* Full width */
+        margin: 0; /* Remove margin */
+        margin-bottom: 20px; /* Space between stacked elements */
+    }
+}
